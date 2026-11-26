@@ -1,0 +1,69 @@
+:root{
+  --bg:#fff4f1; --card:#ffffff; --texto:#4a2c3a; --suave:#8a6676;
+  --rosa:#e4577f; --vinho:#8e2750; --borda:#f6d5de;
+}
+@media (prefers-color-scheme: dark){
+  :root{ --bg:#2a1620; --card:#3a1f2d; --texto:#fbe8ee; --suave:#d9aebd; --rosa:#ff7fa1; --vinho:#ffb3c8; --borda:#5a2f45; }
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Nunito',system-ui,sans-serif;background:var(--bg);color:var(--texto);line-height:1.7;min-height:100vh;
+  background-image:radial-gradient(circle at 20% 0%,rgba(228,87,127,.18),transparent 45%),radial-gradient(circle at 90% 30%,rgba(255,180,150,.18),transparent 40%);
+  background-attachment:fixed;overflow-x:hidden}
+
+/* Hero + timer */
+.hero{text-align:center;padding:56px 16px 32px;position:relative;z-index:1}
+.sub{color:var(--suave);font-weight:600;margin-bottom:6px}
+h1{font-family:'Playfair Display',serif;font-size:clamp(2.2rem,7vw,4rem);color:var(--vinho);line-height:1.15}
+.desde{margin:10px 0 26px;color:var(--suave)}
+.timer{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;max-width:760px;margin:0 auto}
+.timer div{background:var(--card);border:1px solid var(--borda);border-radius:18px;min-width:92px;padding:14px 10px;box-shadow:0 10px 24px rgba(142,39,80,.12)}
+.timer span{display:block;font-family:'Playfair Display',serif;font-size:2.2rem;font-weight:600;color:var(--rosa);font-variant-numeric:tabular-nums;line-height:1.1}
+.timer small{color:var(--suave);font-size:.85rem}
+.total{margin-top:16px;color:var(--suave);font-size:.95rem}
+
+/* Layout */
+.container{max-width:860px;margin:0 auto;padding:0 16px 40px;position:relative;z-index:1}
+.tabs{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-bottom:22px}
+.tab{font:inherit;font-weight:700;cursor:pointer;border:1px solid var(--borda);background:var(--card);color:var(--vinho);
+  padding:10px 16px;border-radius:999px;transition:background .2s,color .2s,transform .15s}
+.tab:hover{transform:translateY(-2px)}
+.tab:focus-visible{outline:3px solid var(--rosa);outline-offset:2px}
+.tab.ativo{background:var(--rosa);color:#fff;border-color:var(--rosa)}
+
+.content{display:none;background:var(--card);border:1px solid var(--borda);border-radius:24px;padding:28px;box-shadow:0 14px 34px rgba(142,39,80,.1)}
+.content.ativo{display:block;animation:entra .4s ease}
+@keyframes entra{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+h2{font-family:'Playfair Display',serif;color:var(--vinho);font-size:1.7rem;margin-bottom:16px}
+h3{color:var(--rosa);margin-bottom:6px}
+.moment{border-left:4px solid var(--rosa);padding:6px 0 6px 16px;margin-bottom:18px}
+.date{font-family:'Playfair Display',serif;font-style:italic;font-size:1.4rem;text-align:center;margin:10px 0}
+.date-sub{text-align:center;color:var(--suave)}
+
+.grade{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:12px}
+.grade img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:16px;cursor:zoom-in;transition:transform .2s}
+.grade img:hover{transform:scale(1.03)}
+
+.lista{list-style:none;display:grid;gap:14px}
+.lista li{background:var(--bg);border-radius:16px;padding:14px 18px}
+.lista .poema{white-space:pre-line;font-family:'Playfair Display',serif;font-style:italic;text-align:center}
+
+.carta{background:var(--bg);border-radius:18px;padding:18px 20px;margin-bottom:16px}
+.carta p{margin-bottom:10px;max-width:68ch}
+
+.rodape{text-align:center;font-size:2rem;padding-bottom:30px;position:relative;z-index:1;animation:bate 1.4s infinite}
+@keyframes bate{0%,100%{transform:scale(1)}50%{transform:scale(1.25)}}
+
+/* Corações caindo */
+.petalas{position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden}
+.petalas i{position:absolute;top:-30px;font-style:normal;opacity:.5;animation:cai linear forwards}
+@keyframes cai{to{transform:translateY(110vh) rotate(360deg)}}
+
+/* Visualizador de fotos */
+.zoom{position:fixed;inset:0;background:rgba(0,0,0,.85);display:flex;align-items:center;justify-content:center;z-index:10;padding:16px;cursor:zoom-out}
+.zoom img{max-width:100%;max-height:100%;border-radius:12px}
+
+@media (max-width:520px){
+  .timer div{min-width:80px}.timer span{font-size:1.8rem}.content{padding:20px}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}

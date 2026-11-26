@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Uma Pequena Lembrança</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;1,500&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+<div class="petalas" id="petalas" aria-hidden="true"></div>
+
+<header class="hero">
+  <p class="sub">Feliz aniversário, minha princesa</p>
+  <h1>Uma Pequena Lembrança</h1>
+  <p class="desde">Juntos desde 29 de agosto de 2022</p>
+
+  <div class="timer" id="timer" aria-live="off">
+    <div><span id="t-anos">0</span><small>anos</small></div>
+    <div><span id="t-meses">0</span><small>meses</small></div>
+    <div><span id="t-dias">0</span><small>dias</small></div>
+    <div><span id="t-horas">00</span><small>horas</small></div>
+    <div><span id="t-min">00</span><small>min</small></div>
+    <div><span id="t-seg">00</span><small>seg</small></div>
+  </div>
+  <p class="total" id="total"></p>
+</header>
+
+<main class="container">
+  <nav class="tabs" role="tablist">
+    <button class="tab ativo" data-tab="moments" role="tab">Momentos Especiais</button>
+    <button class="tab" data-tab="first-meeting" role="tab">Seu Primeiro Aniversário</button>
+    <button class="tab" data-tab="our-date" role="tab">Data de Namoro</button>
+    <button class="tab" data-tab="gallery" role="tab">Galeria de Fotos</button>
+    <button class="tab" data-tab="plans" role="tab">Se estiver triste, venha aqui</button>
+    <button class="tab" data-tab="about-us" role="tab">Para você</button>
+  </nav>
+
+  <section class="content ativo" id="moments">
+    <h2>Momentos Especiais</h2>
+    <div class="moment">
+      <h3>Nosso Primeiro Beijo</h3>
+      <p>Dia 19/08/2022 foi magnífico.</p>
+    </div>
+    <div class="moment">
+      <h3>A primeira vez que ficamos longe</h3>
+      <p>Quando eu fui viajar e ficamos chorando, porque eu ia ficar 4 dias longe.</p>
+    </div>
+  </section>
+
+  <section class="content" id="first-meeting">
+    <h2>O seu primeiro aniversário comigo</h2>
+    <div class="moment">
+      <h3>O dia</h3>
+      <p>Foi um dia muito corrido, pois na época a gente não se desgrudava por nada. A preparação foi muito boa, praticamente todos ajudaram, o dia foi magnífico e foi quando eu entreguei as nossas primeiras alianças.</p>
+    </div>
+  </section>
+
+  <section class="content" id="our-date">
+    <h2>Data de Namoro</h2>
+    <p class="date">Nosso namoro começou no dia 29 de agosto de 2022. ❤</p>
+    <p class="date-sub">E o tempo continua passando, contando cada segundo ao seu lado, lá em cima. ↑</p>
+  </section>
+
+  <section class="content" id="gallery">
+    <h2>Galeria de Fotos</h2>
+    <div class="grade">
+      <img src="./fotos/foto_1.png" alt="Foto 1" loading="lazy">
+      <img src="./fotos/foto_2.png" alt="Foto 2" loading="lazy">
+      <img src="./fotos/foto_3.png" alt="Foto 3" loading="lazy">
+      <img src="./fotos/foto_4.png" alt="Foto 4" loading="lazy">
+      <img src="./fotos/foto_5.png" alt="Foto 5" loading="lazy">
+      <img src="./fotos/foto_6.png" alt="Foto 6" loading="lazy">
+      <img src="./fotos/foto_7.png" alt="Foto 7" loading="lazy">
+      <img src="./fotos/foto_8.png" alt="Foto 8" loading="lazy">
+    </div>
+  </section>
+
+  <section class="content" id="plans">
+    <h2>Pra quando minha princesa estiver triste</h2>
+    <ul class="lista">
+      <li>Cânticos 4:7 — Tu és toda formosa, amada minha, e em ti não há mancha.</li>
+      <li>Você é inteiramente perfeita, minha princesa. Mais perfeita do que o céu azul, mais perfeita do que todas as estrelas do universo.</li>
+      <li>Se tiver vontade de comer um chocolate, me procura que eu vou te dar. "O chocolate claro kkk"</li>
+      <li class="poema">Eu te amo mais que os grãos de areia,
+espalhados pela Terra e por mundos distantes.
+Mais que as galáxias dançando no universo,
+mais que as estrelas que brilham no céu.
+
+Te amo mais que cada gota dos oceanos,
+mais que tudo que existe e ainda vai existir.
+O que sinto por ti não se mede,
+não tem preço, nem tem fim.
+
+És minha princesa, meu eterno sonho,
+meu amor sem limites, meu destino.</li>
+    </ul>
+  </section>
+
+  <section class="content" id="about-us">
+    <h2>Sobre Você</h2>
+
+    <article class="carta"><h3>Mamãe ❤️</h3>
+      <p>Oiê meu amor, hoje nos reunimos pra demonstrar o quanto você é amada e especial pra todos nós. É o dia do seu aniversário, o dia em que eu conheci o verdadeiro amor, o dia em que esqueci os medos e enfrentei os julgamentos. Você não sabe, mas curou feridas que nem foi você que causou. Em você achei tudo que eu procurava: minha melhor amiga, minha confidente, minha conselheira (eu nunca sigo os conselhos, mas escuto kk). Eu sou eternamente grata a Deus por ter você em minha vida, grata a Deus pela filha maravilhosa que você é. Tenho orgulho da mulher que você vem se tornando, da sua personalidade que eu não faço ideia de quem você puxou kkk. Meu amor, eu te desejo tudo de melhor na sua vida, que todos os seus sonhos se realizem e que sua vida seja próspera, feliz e cheia de amor.</p>
+      <p>Eu amo você infinitamente ❤️ Você é e sempre vai ser minha menininha, minha princesa, minha matusquela 😍 Eu te amo, neném, com todo o meu coração. Até mesmo quando eu não estiver aqui, vou estar ao seu lado cuidando de vocês sempre ❤️</p>
+    </article>
+
+    <article class="carta"><h3>Seu namorado lindo ❤️</h3>
+      <p>Oiii, meu amor! Vim aqui te desejar um feliz aniversário! Muitos aninhos de vida, que minha princesa consiga conquistar tudo o que você sonha e sempre sonhou. Saiba que eu te amo muito, muito mesmo. Você é a pessoa mais importante da minha vida, minha alma gêmea, minha futura esposa, a mulher com quem eu quero passar o resto dos meus dias.</p>
+      <p>Nesse dia maravilhoso, quero que você se divirta muito! Fiz essa pequena lembrança pra você. Que você continue sendo essa menina perfeita, maravilhosa e incrível que você é. Você é literalmente tudo pra mim, minha princesa. Tenho certeza de que não sei mais viver sem você. Muito obrigado por ser essa namorada incrível. Me desculpa pelas vezes em que te chateei, sei que sou muito falho, mas acima de tudo eu te amo muito, muito mesmo, e prometo ser o melhor namorado do mundo pra você, meu amor.</p>
+      <p><strong>EU TE AMOOOOO</strong> 🤍🤍❤️❤️❤️</p>
+    </article>
+
+    <article class="carta"><h3>Jhenny ❤️</h3>
+      <p>Hoje é um dia muito especial: o aniversário da Bibia! São 17 anos de uma menina linda, incrível e cheia de luz. Bibia, você é simplesmente maravilhosa. Sua beleza chama atenção de longe, mas é quando a gente te conhece de verdade que percebe o quão especial você é. Seu sorriso ilumina qualquer ambiente, seu olhar é cheio de vida, e seu cabelo… ah, seu cabelo é perfeito!</p>
+      <p>Eu tenho tanto orgulho de ter você como irmã. Cada momento que vivemos juntos está guardado no meu coração: as risadas, as conversas, os segredos, as brincadeiras bobas. Você é uma parte essencial da minha história. Parabéns pelos seus 17 anos! Que essa nova fase seja ainda mais linda, com muito amor, alegria e conquistas. Te amo mais do que palavras conseguem dizer.</p>
+    </article>
+
+    <article class="carta"><h3>Edson, seu sogro ❤️</h3>
+      <p>Hoje é seu dia, Bia. Que você possa viver esse dia como se fosse único, mas que tenha toda a eternidade pra realizar seus sonhos. Feliz aniversário 🎂🎂🎂 Sucesso e muito amor. Parabéns!</p>
+    </article>
+
+    <article class="carta"><h3>Leticia ❤️</h3>
+      <p>Aeee 🥳🥳🥳 Chegou o grande dia, meu amor! Então você já sabe que eu vou te desejar um feliz aniversário, né kkk. Que Deus te abençoe muito, que ele ilumine seus caminhos sempre, que ele te dê muito dinheiro pra você gastar comigo 😍🥰 e que você continue sendo essa garota incrível que você é. Saiba que eu TE AMO MUITO MUITO MUITOOOOO!</p>
+      <p>Independente de onde você for, sempre vai estar no meu coração. Você sempre será minha parceirinha fiel pra tudo, sempre vai topar tudo comigo. Sério, te amo demais (MAN) 👈🏾 kkk, só nós vamos entender. Enfim, é isso, bb. Não esqueça: EU TE AMO ETERNAMENTE ❤️</p>
+    </article>
+
+    <article class="carta"><h3>Aline ❤️</h3>
+      <p>Oi, Bia! Minha norinha 🥰 Passando pra te desejar um feliz aniversário. Te desejar coisas lindas e belas... Saiba que te amo como uma filha ❤️ E te desejo tudo que há de mais lindo nessa terra. Toda felicidade, princesa. Parabéns 👏</p>
+    </article>
+
+    <article class="carta"><h3>Marcus ❤️</h3>
+      <p>Feliz aniversário, Biaaa, sua égua! Parabéns, prima. Espero que você realize seus sonhos e desejos e que Deus abençoe seus dias, principalmente hoje, que é um dia tão especial. Obrigado pelas resenhas, pelas brigas, pela brincadeira. Espero que você continue sendo essa menina maravilhosa, porém muito chata, nojenta e feia 😂 Felicidades, Bia 🥳🥳 Muito obrigado por tudo!</p>
+    </article>
+  </section>
+</main>
+
+<footer class="rodape">❤️</footer>
+<script src="scripts.js"></script>
+</body>
+</html>
